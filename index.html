@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу - Софии и Юрий</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="intro-view" class="view active" style="display: flex;">
+            <div class="intro-header">
+                <h1>София и Юрий</h1>
+                <p>14 . 12 . 25</p>
+            </div>
+
+            <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
+                <div class="envelope-back"></div>
+
+                <div class="letter">
+                    <div class="letter-logo"></div>
+                    <div class="letter-text">Вы приглашены!</div>
+                </div>
+
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+
+                <div class="wax-seal">
+                    <span>A</span>
+                </div>
+
+                <div class="click-to-open">Нажми, чтобы открыть</div>
+            </div>
+        </div>
+        <div id="home-view" class="view">
+            <div class="header">
+                <h1>София и Юрий
+                </h1>
+                <p>14 . 12 . 25</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="card envelope-card">
+                    <img src="images/two.jpg" alt="Couple Header" class="card-bg-img" style="opacity: 0.3;">
+                    <div class="card-overlay"></div>
+                    <h2 class="ad-logo">AD</h2>
+                    <h2>Вы приглашены!</h2>
+                </div>
+
+                <div class="card photo-card photo-card-1">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"
+                        alt="Пара влюбленных">
+                </div>
+
+                <div class="card rsvp-card" onclick="alert('Переход на форму RSVP (Google Forms/Typeform)')">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=60"
+                        alt="Holding hands" class="card-bg-img" style="opacity: 0.25;">
+                    <div class="card-overlay"></div>
+                    <span class="small-text">Подтвердите</span>
+                    <span class="title-text" style="font-size: 24px;">Присутствие</span>
+                    <span class="small-text">Здесь</span>
+                </div>
+
+                <div class="card photo-card photo-card-2" onclick="window.switchView('gallery-view')">
+                    <img src="https://images.unsplash.com/photo-1621621667797-e06afc217fb0?auto=format&fit=crop&w=600&q=80"
+                        alt="Свадебная фотосессия">
+                </div>
+
+                <div class="card timeline-card" onclick="window.switchView('timeline-view')">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=400&q=60"
+                        alt="Свадебный банкет" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <span class="small-text">События</span>
+                    <span class="title-text">Программа</span>
+                </div>
+
+                <div class="card date-card">
+                    <img src="https://images.unsplash.com/photo-1522673607200-1645062cd95c?auto=format&fit=crop&w=400&q=60"
+                        alt="Flowers" class="card-bg-img" style="opacity: 0.15">
+                    <span class="small-text">Сохраните дату</span>
+                    <span class="small-text" style="margin-top:10px;">Воскресенье</span>
+                    <div class="date-number">14</div>
+                    <span class="small-text" style="border-top: 1px solid #ddd; padding-top: 5px;">Декабрь
+                        2025</span>
+                    <span class="small-text" style="margin-top: 10px; font-weight: bold; text-align: center;">Сад
+                        Жозефины</span>
+                </div>
+
+                <div class="card green-card details-card" onclick="window.switchView('details-view')">
+                    <img src="images/one.jpg" alt="Detailed dress" class="card-bg-img" style="opacity: 0.2;">
+                    <div class="card-overlay"></div>
+                    <span class="small-text">Нажмите для</span>
+                    <span class="title-text" style="font-size: 22px;">ДЕТАЛЕЙ</span>
+                </div>
+
+                <div class="card faq-card" onclick="window.switchView('faq-view')">
+                    <div class="circle-btn">
+                        <div>
+                            <div
+                                style="font-size: 10px; font-family: 'Lato', sans-serif; font-style: normal; letter-spacing: 1px; margin-bottom: 5px;">
+                                Нажмите для
+                            </div>
+                            FAQ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">Все права защищены © 2025</div>
+        </div>
+        <div id="details-view" class="view">
+            <h2 class="page-title">Место<br>Проведения</h2>
+            <div class="section-block">
+                <h3>Виллы и павильон Гунита</h3>
+                <p style="font-size: 12px; margin-bottom: 10px;">Церемония - У пруда</p>
+                <div class="venue-images">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"
+                        alt="Свадебная церемония">
+                    <img src="https://images.unsplash.com/photo-1519225468359-2996bc01c083?auto=format&fit=crop&w=600&q=80"
+                        alt="Свадебное место">
+                </div>
+            </div>
+            <div class="section-block">
+                <h3>Дресс-код</h3>
+                <p class="serif" style="font-size: 20px; font-style: italic; margin-bottom: 10px;">Полуофициальный</p>
+                <p style="font-size: 13px; color: #555; line-height: 1.5;">Мы просим вас одеться удобно, но элегантно
+                    для нашего праздника на свежем воздухе.</p>
+                <img src="https://images.unsplash.com/photo-1594911765924-489e58a5521e?auto=format&fit=crop&w=600&q=80"
+                    alt="Свадебный наряд"
+                    style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 10px;">
+            </div>
+            <div class="back-btn" onclick="window.switchView('home-view')">Назад</div>
+        </div>
+        <div id="timeline-view" class="view">
+            <h2 class="page-title">Программа<br>Дня</h2>
+            <div style="margin-bottom: 30px; border-radius: 8px; overflow: hidden; height: 150px;">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"
+                    alt="Celebration" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-time">15:00</div>
+                <div class="timeline-content">
+                    <h4>Церемония</h4>
+                    <p>Пожалуйста, приходите вовремя, церемония начнется точно в срок.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">17:00</div>
+                <div class="timeline-content">
+                    <h4>Коктейльный час</h4>
+                    <p>Время отдохнуть, освежиться и пообщаться.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">18:00</div>
+                <div class="timeline-content">
+                    <h4>Банкет</h4>
+                    <p>Приглашаем вас расслабиться, поужинать и отпраздновать с нами.</p>
+                </div>
+            </div>
+            <div class="back-btn" onclick="window.switchView('home-view')">Назад</div>
+        </div>
+        <div id="faq-view" class="view" style="background-color: var(--green); color: white;">
+            <h2 class="page-title" style="color: white;">FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-q">Во сколько нужно приехать?</div>
+                <div class="faq-a" style="color: #dbe2d6;">Минимум за 30 минут до начала церемонии.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Есть ли парковка?</div>
+                <div class="faq-a" style="color: #dbe2d6;">Да, для гостей предусмотрена большая парковка.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Можно ли с детьми?</div>
+                <div class="faq-a" style="color: #dbe2d6;">К сожалению, из-за ограничений места приглашены только
+                    взрослые.</div>
+            </div>
+            <div class="back-btn" style="border-color: white; color: white;" onclick="window.switchView('home-view')">
+                Назад
+            </div>
+        </div>
+
+
+        <div id="gallery-view" class="view" style="background-color: #f0f0f0; overflow: visible;">
+            <h2 class="page-title">Альбом</h2>
+
+            <div class="book-perspective">
+                <div class="book" id="photo-book">
+                    <div class="book-page" onclick="flipPage(this)">
+                        <div class="page-front book-cover-front">
+                            <h1 style="font-family: 'Playfair Display', serif; font-size: 40px; margin-bottom: 20px;">
+                                Наши<br>Моменты</h1>
+                            <p style="font-size: 14px; letter-spacing: 2px;">ЛИСТАЙТЕ</p>
+                            <div class="instruction-text">(Нажмите чтобы открыть)</div>
+                        </div>
+                        <div class="page-back">
+                            <img src="images/one.jpg" alt="Photo 1">
+                        </div>
+                    </div>
+                    <div class="book-page" onclick="flipPage(this)">
+                        <div class="page-front">
+                            <img src="images/six.jpg" alt="Photo 6">
+                        </div>
+                        <div class="page-back">
+                            <img src="images/seven.jpg" alt="Photo 7">
+                        </div>
+                    </div>
+                    <div class="book-page" onclick="flipPage(this)">
+                        <div class="page-front">
+                            <img src="images/eight.jpg" alt="Photo 8">
+                        </div>
+                        <div class="page-back">
+                            <img src="images/nine.jpg" alt="Photo 9">
+                        </div>
+                    </div>
+                    <div class="book-page" onclick="flipPage(this)">
+                        <div class="page-front">
+                            <img src="images/ten.jpg" alt="Photo 10">
+                        </div>
+                        <div class="page-back book-cover-front">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="back-btn" onclick="window.switchView('home-view')">Назад</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
